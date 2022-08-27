@@ -12,7 +12,7 @@ frontend:
     - ./dotnet6/dotnet publish -c Release -o release
 artifacts:
   baseDirectory: /release/wwwroot
-files:
+  files:
   - '**/*'
 cache:
 paths: []
