@@ -14,5 +14,5 @@ frontend:
     baseDirectory: /release/wwwroot
 files:
   - '**/*'
- cache:
- paths: []
+cache:
+paths: []
