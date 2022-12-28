@@ -1,4 +1,4 @@
-<div class="card @CardClass">
+<div class="card @CardClass" style="border-color: black; @CardStyle">
     @if(Header is not null)
     {
         <div class="card-header @HeaderClass" style="background-color: #7395AE">
@@ -35,7 +35,11 @@
     public string CardClass {get; set;} = string.Empty;
 
     [Parameter]
+    public string CardStyle {get; set;} = string.Empty;
+
+    [Parameter]
     public string HeaderClass {get; set;} = string.Empty;
+
 
     [Parameter]
     public string BodyClass {get; set;} = string.Empty;
