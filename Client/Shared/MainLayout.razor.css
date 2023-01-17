@@ -1,4 +1,12 @@
 .page {
+    background: linear-gradient(232deg, #2c3531, #116466);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimatedGradient 10s ease infinite;
+    -moz-animation: AnimatedGradient 10s ease infinite;
+    -o-animation: AnimatedGradient 10s ease infinite;
+    animation: AnimatedGradient 10s ease infinite;
+
     position: relative;
     display: flex;
     flex-direction: column;
@@ -11,22 +19,12 @@
 main {
     flex: 1;
     min-height: calc(100vh - 60px);
-    background-color: wheat;
 }
 
 article {
     min-height: 100%;
 }
 
-main {
-    background: linear-gradient(232deg, #2c3531, #116466);
-    background-size: 400% 400%;
-
-    -webkit-animation: AnimatedGradient 10s ease infinite;
-    -moz-animation: AnimatedGradient 10s ease infinite;
-    -o-animation: AnimatedGradient 10s ease infinite;
-    animation: AnimatedGradient 10s ease infinite;
-}
 
 @-webkit-keyframes AnimatedGradient {
     0%{background-position:0% 10%}
