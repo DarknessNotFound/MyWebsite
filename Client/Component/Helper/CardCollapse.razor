@@ -1,0 +1,67 @@
+<div class="card @CardClass" style="border-color: black; @CardStyle">
+    <div class="card-header d-flex justify-content-between" 
+         style="background-color: #7395AE" 
+         @onclick='HeaderClicked'
+    >
+        <div class="h3">@Header</div>
+        <div class="h6">@(IsOpen ? "-" : "+")</div>
+    </div>
+
+    @if(IsOpen)
+    {
+
+    @if(Body is not null)
+    {
+        <div class="card-body @BodyClass" style="background-color: #D1E8E2;">
+            @Body
+        </div>
+    }
+
+    @if(Footer is not null)
+    {
+        <div class="card-footer @FooterClass">
+            @Footer
+        </div>
+    }
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string? Header { get; set; }
+
+    [Parameter]
+    public RenderFragment? Body { get; set; } = null;
+
+    [Parameter]
+    public RenderFragment? Footer { get; set; } = null;
+
+    [Parameter]
+    public string CardClass {get; set;} = string.Empty;
+
+    [Parameter]
+    public string CardStyle {get; set;} = string.Empty;
+
+    [Parameter]
+    public string BodyClass {get; set;} = string.Empty;
+
+    [Parameter]
+    public string FooterClass {get; set;} = string.Empty;
+
+
+    private bool IsOpen = false;
+
+    private async void HeaderClicked()
+    {
+        if(IsOpen)
+        {
+            IsOpen = false;
+            await InvokeAsync(StateHasChanged);
+        }
+        else
+        {
+            IsOpen = true;
+            await InvokeAsync(StateHasChanged);
+        }
+    }
+}

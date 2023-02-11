@@ -1,0 +1,71 @@
+﻿<div class="container-fluid" style="height: 100%;">
+	<div style="max-height: 70vh; overflow-y: auto; overflow-x: none;">
+		<div class="h4">
+			@TextDisplaying[0]
+		</div>
+		@foreach(string text in TextDisplaying)
+		{
+			if (text != TextDisplaying[0])
+			{
+				<p>
+					@text
+				</p>
+			}
+		}
+	</div>
+	<div class="d-flex justify-content-around">
+		<div class="arrow" @onclick='ShiftLeft'>@("<")</div>
+		<div class="arrow" @onclick='ShiftRight'>@(">")</div>
+	</div>
+</div>
+
+<style>
+	.arrow {
+		width: 50px;
+		background-color: rgba(255, 255, 255, 0.5);
+		font-size: 30px;
+		font-weight 600; 
+		text-align: center;
+	}
+</style>
+
+@code {
+	[Parameter]
+	public List<List<string>> Data { get; set; } = new List<List<string>>();
+
+	private List<string> TextDisplaying = new List<string>();
+	private int index;
+
+	protected override void OnInitialized()
+	{
+		if(Data.Count > 0)
+		{
+			index = 0;
+			TextDisplaying = Data[0];
+		}
+		else
+		{
+			Data.Add(new List<string>() { "Error", "Error retriving data." });
+		}
+	}
+
+	public void ShiftRight()
+	{
+		if (index == Data.Count - 1)
+			index = 0;
+		else
+			index++;
+
+		StateHasChanged();
+	}
+
+	public void ShiftLeft()
+	{
+		if (index == 0)
+			index = Data.Count - 1;
+		else
+			index--;
+
+		StateHasChanged();
+	}
+}
