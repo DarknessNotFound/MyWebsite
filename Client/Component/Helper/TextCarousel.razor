@@ -8,7 +8,14 @@
 			if (text != TextDisplaying[0])
 			{
 				<div style="overflow-y: auto; word-wrap: break-word; max-height: @MaxHeight;">
+				@if(text[0] == '*')
+				{
+					<Tab />@(text.Remove(0, 1))
+				}
+				else
+				{
 					@text
+				}
 				</div>
 			}
 		}

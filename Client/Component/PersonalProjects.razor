@@ -1,5 +1,10 @@
-﻿<h3>PersonalProjects</h3>
-
-@code {
-
-}
+﻿<Card Title="Personal Projects" CardStyle="width: 95%;">
+	<Body>
+		<p>
+			<Tab />Whenever I get the time, I enjoy working on some projects that involve programming. One of them is making Discord bots using Python to run events at the Baptist Student Union. I’ve made two bots so far, the first being a bot to pass out roles for a game called Mafia and another to track snipes for our sniping season [if you take a picture of someone without them noticing then it is a snipe] event we have every year. The Mafia bot will gather a list of all the players and then randomly assign each player a role in the game. The Sniping bot is a bit more complicated as it tracks snipes in the discord and then saves them to a SQLite Database. This bot will scrape messages and track who sniped who and when. Then there are admin commands that allow us to view, count, edit, and remove the snipes in the database.
+		</p>
+		<p>
+			<Tab />Another one of my projects that I’m working on is a logging api that runs in a Docker container. One of my long-term projects is to program my own smart home technology. Due to this, I want a good logging system to track events, errors, etc. I wrote my logging system using Microsoft’s Dotnet Core simple API that then is recorded in a SQLite database. I also added basic API key capabilities for both security and application identification. This system I was able to dockerize and successfully run on my Raspberry Pi. Since my end goal is to run smart home technology, I will want to run a bunch of sub-systems in docker containers communicating with each other using APIs. For example, I will have my lights system in one docker container, speakers in another, a printer in another, etc. This separation is a good security feature so if one sub-system goes down, it won’t pull everything else down with it.
+		</p>
+	</Body>
+</Card>
