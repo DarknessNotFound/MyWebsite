@@ -1,13 +1,13 @@
-<div class="card @CardClass" style="border-color: black; @CardStyle">
+<div class="card shadow CardCustomMobileStyle CardCustomStyle @CardClass">
     @if(Header is not null)
     {
-        <div class="card-header @HeaderClass" style="background-color: #7395AE">
+        <div class="card-header @HeaderClass" style="background-color: #8B85C1">
             @Header
         </div>
     }
     else if (!string.IsNullOrEmpty(Title))
     {
-        <div class="card-header" style="background-color: #7395AE">
+        <div class="card-header" style="background-color: #8B85C1">
             <div class="h2">
                 @Title
             </div>
@@ -16,7 +16,7 @@
 
         @if(Body is not null)
     {
-        <div class="card-body @BodyClass" style="background-color: #D1E8E2;">
+        <div class="card-body @BodyClass" style="background-color: #D4CDF4;">
             @Body
         </div>
     }
@@ -28,6 +28,25 @@
         </div>
     }
 </div>
+
+<style>
+    .CardCustomStyle {
+        border-color: black;
+        width: 100%;
+    }
+    @@media(max-width: 991.98px)
+    {
+        .CardCustomStyle {
+            @CardMobileStyle
+        }
+    }
+    @@media(min-width: 992px;)
+    {
+        .CardCustomStyle {
+            @CardStyle
+        }
+    }
+</style>
 
 @code {
     [Parameter]
@@ -44,6 +63,9 @@
 
     [Parameter]
     public string CardStyle {get; set;} = string.Empty;
+
+    [Parameter]
+    public string CardMobileStyle {get; set;} = string.Empty;
 
     [Parameter]
     public string HeaderClass {get; set;} = string.Empty;

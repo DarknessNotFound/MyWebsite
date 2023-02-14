@@ -2,7 +2,14 @@
 
 <PageTitle>Grant Alb</PageTitle>
 
-<div class="d-flex">
+<div class="d-lg-none">
+    <WelcomeBar />
+    <br />
+    <QuickFacts />
+    <br />
+    <AboutMeBlurb />
+</div>
+<div class="d-none d-lg-flex">
     <div class="w-25">
         <QuickFacts />
     </div>
@@ -13,7 +20,7 @@
     </div>
 </div>
 <br />
-<div class="d-flex justify-content-evenly mt-3" style="min-height: 20rem;">
+<div class="d-none d-lg-flex justify-content-evenly mt-3" style="min-height: 20rem;">
     <div class="w-50">
         <EmployeementHistory />
     </div>
@@ -21,15 +28,25 @@
         <CodingJourney />
     </div>
 </div>
+<div class="d-lg-none justify-content-evenly mt-3" style="min-height: 20rem;">
+    <EmployeementHistory />
+    <br />
+    <CodingJourney />
+</div>
 <br />
 <CareerAspirations />
 <br />
-<div class="d-flex justify-content-evenly mt-3" style="min-height: 20rem;">
+<div class="d-none d-lg-flex justify-content-evenly mt-3" style="min-height: 20rem;">
     <div class="w-50">
         <LeadershipPositions />
     </div>
     <div class="w-50">
         <PersonalProjects />
     </div>
+</div>
+<div class="d-lg-none justify-content-evenly mt-3" style="min-height: 20rem;">
+    <LeadershipPositions />
+    <br />
+    <PersonalProjects />
 </div>
 <br />
