@@ -5,6 +5,14 @@
             @Header
         </div>
     }
+    else if (!string.IsNullOrEmpty(Title))
+    {
+        <div class="card-header" style="background-color: #7395AE">
+            <div class="h2">
+                @Title
+            </div>
+        </div>
+    }
 
         @if(Body is not null)
     {
@@ -46,5 +54,8 @@
 
     [Parameter]
     public string FooterClass {get; set;} = string.Empty;
+
+    [Parameter]
+    public string Title { get; set; } = string.Empty;
 
 }

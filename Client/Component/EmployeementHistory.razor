@@ -1,5 +1,32 @@
-﻿<h3>EmployeementHistory</h3>
+﻿<Card Title="Employement History" CardStyle="width: 95%;">
+	<Body>
+		<TextCarousel Data="Data" MaxHeight="15rem"/>
+	</Body>
+</Card>
 
 @code {
+	List<List<string>> Data = new List<List<string>>();
 
+	protected override void OnInitialized()
+	{
+		Data.Add(new List<string>() {
+			"5th-7th Grade",
+			"I started programming early on in school. I really enjoyed the game Roblox and wanted to create my own world. I would download free assets and then play around with the code to figure out how it worked. Then I would suit it for my needs. Then in middle school, I was involved with the Science Olympiad robotics as well as the First Lego League robotics. In both competitions, I got to be involved with the programming."
+		});
+
+		Data.Add(new List<string>() {
+			"8th-12th Grade",
+			"I was very involved with Vex Robotics, specifically team 9065P. I learned a lot about involving end users (our robot drivers), sensors, autonomous robotics, troubleshooting, and setting up code to be readable in the future. My freshman year, we had two teams go to Worlds, one qualifying 20th in their division and the other getting 2nd overall (2nd out of about 600 teams). My senior year, ‘19-’20 school year, we got another two robots qualified for Worlds but due to covid the competition was canceled."
+		});
+
+		Data.Add(new List<string>() {
+			"College",
+			"I get to study computer science daily and I really enjoy it. I’ve taken a Python and C++ course, Data Structures, Algorithms, and Intro to Databases. This semester I am taking Computer Science Theory. If I’m not coding in class, I like to work on personal projects: usually python discord bots and coding things on my Raspberry Pi."
+		});
+
+		Data.Add(new List<string>() {
+			"Nucor Co-op, Summer-Fall of ‘22",
+			" I got to do a Co-op at Nucor-Yamato Steel Mill in Blytheville Arkansas developing local applications. I learned a lot about web development, databases, APIs, coding on a team, and interacting with end users. I was able to code multiple projects for them during my time. The one I’m most proud of I spent the last 4 months of my Co-op rewriting their internal employee homepage. This application is a landing page for all of the ~1000 employees at the mill. There was a lot of collaboration about how best to design the application to be maintainable long term (the old application was updated at least once a month and over ten years old). I’m very proud of this project as it was the first major project I got to do in a business environment."
+		});
+	}
 }

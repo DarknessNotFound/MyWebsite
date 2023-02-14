@@ -1,5 +1,5 @@
-﻿<div class="container-fluid" style="height: 100%;">
-	<div style="max-height: 70vh; overflow-y: auto; overflow-x: none;">
+﻿<div class="container-fluid">
+	<div class="h-75">
 		<div class="h4">
 			@TextDisplaying[0]
 		</div>
@@ -7,13 +7,13 @@
 		{
 			if (text != TextDisplaying[0])
 			{
-				<p>
+				<div style="overflow-y: auto; word-wrap: break-word; max-height: @MaxHeight;">
 					@text
-				</p>
+				</div>
 			}
 		}
 	</div>
-	<div class="d-flex justify-content-around">
+	<div class="d-flex justify-content-around h-25">
 		<div class="arrow" @onclick='ShiftLeft'>@("<")</div>
 		<div class="arrow" @onclick='ShiftRight'>@(">")</div>
 	</div>
@@ -26,6 +26,7 @@
 		font-size: 30px;
 		font-weight 600; 
 		text-align: center;
+		user-select: none;
 	}
 </style>
 
@@ -33,15 +34,18 @@
 	[Parameter]
 	public List<List<string>> Data { get; set; } = new List<List<string>>();
 
-	private List<string> TextDisplaying = new List<string>();
+	[Parameter]
+	public string MaxHeight { get; set; } = "";
+
+	private List<string> TextDisplaying => Data[index];
 	private int index;
+
 
 	protected override void OnInitialized()
 	{
 		if(Data.Count > 0)
 		{
 			index = 0;
-			TextDisplaying = Data[0];
 		}
 		else
 		{
