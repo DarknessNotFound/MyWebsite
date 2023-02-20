@@ -1,38 +1,70 @@
 ﻿<Card Title="Employement History" CardStyle="width: 95%;">
 	<Body>
-		<div style="height: 300px;">
-			<TextCarousel Data="Data" MaxHeight="300px"/>
-		</div>
+		<div class="h5"><u>Nucor-Yamato Software Developer Co-op Summer/Fall 2022</u></div>
+		<ul>
+			<li>Worked as a full stack developer using .NET Blazor and SQL.</li>
+			<li>Responsibilities: building, documenting, and maintaining apps for the employees out in the mill.</li>
+			<li>
+				Projects:
+				<ul>
+					<li>
+						Rewrote the internal employee homepage.
+						<ul>
+							<li>Fully mobile friendly.</li>
+							<li>Wrote two different tools for aiding in editing data, a navigational links manager and a cafeteria specials editor.</li>
+						</ul>
+					</li>
+					<li>Weather application that highlighted dangerous temperatures. </li>
+					<li>
+						Data dashboard on a Kiosk-like display.
+						<ul><li>Also coded a Raspberry Pi To automatically display the application to a TV screen. </li></ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+		<div class="h5"><u>Residential Assistant 2021-2022</u></div>
+		<ul>
+			<li>Worked as a Residential Assistant for the Thomas Jefferson dorms at Missouri S&T.</li>
+			<li>
+				Responsibilities
+				<ul>
+					<li>Maintaining personal relationships with the residents on my floor.</li>
+					<li>Planning and running events for my building’s residents.</li>
+					<li>Enforcing university building policies.</li>
+					<li>Secretarial duties – working the reception desk, processing mail, etc.</li>
+				</ul>
+			</li>
+		</ul>
+
+		<div class="h5"><u>Price Chopper Seasonal Produce Clerk 2020-2022</u></div>
+		<ul>
+			<li>
+				Responsibilities
+				<ul>
+					<li>Stocking, facing, and cleaning the department.</li>
+					<li>Assisting customers.</li>
+					<li>
+						Closing the department.
+						<ul><li>I was the only one maintaining the department for the last 4 hours of my shift.</li></ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+		<div class="h5"><u>Price Chopper Utility Clerk 2019-2020</u></div>
+		<ul>
+			<li>
+				Responsibilities
+				<ul>
+					<li>
+						Assisting customers – bagging their groceries, helping them to their car, etc.
+					</li>
+					<li>Store-wide janitorial duties.</li>
+					<li>Pulling in carts.</li>
+					<li>Training new utility clerks.</li>
+				</ul>
+			</li>
+		</ul>
 	</Body>
 </Card>
-
-@code {
-	List<List<string>> Data = new List<List<string>>();
-
-	protected override void OnInitialized()
-	{
-		Data.Add(new List<string>() {
-			"Price Chopper Utility Clerk 2019-2020",
-			"Main responsibilities include: general customer service, helping checkout customers, bringing in carts, and cleaning the store.",
-			"*This was my first “real” job I had with a company. I learned a lot about how to interact with customers, the value of a dollar, general working skills, and how to keep my cool when things go wrong. In addition to my normal responsibilities, I was one of the go-to trainers for new utility clerks and I also became cross-trained as a cashier so I could fill in as needed."
-		});
-
-		Data.Add(new List<string>() {
-			"Price Chopper Seasonal Produce Clerk 2020-2022",
-			"Main responsibilities include: keeping the produce department stocked and faced, assisting customers, daily department cleaning, organizing the backrooms, and closing the department. ",
-			"*I got promoted to the Produce Department after I graduated. This was my first full time job as well as my first job without a lot of direct supervision. Most of my shifts I was the closer (and thus by myself for ~4 hours). I learned a lot about time management as I needed to balance doing closing tasks (mainly cleaning) with keeping the department floor stocked and customers satisfied."
-		});
-
-		Data.Add(new List<string>() {
-			"Residential Assistant 2021-2022",
-			"Main responsibilities include: building relationships with residents, administrative tasks, planning and running events, and general building supervision (enforcing rules, cleaning, basic security, etc).",
-			"*This job stretched my people’s skills a lot. Since my biggest responsibility was the well-being of the residents on my floor, I had to learn how to interact with them as both a friend and an authority figure. In addition to that, I was constantly interacting with residents and workers outside my floor while working the front desk, doing weekend duty, running events, etc. Overall, this was valuable work experience that really helped me grow into the man I am today."
-		});
-
-		Data.Add(new List<string>() {
-			"Nucor-Yamato Software Developer Co-op Summer/Fall 2022",
-			"Main responsibilities include: building, documenting, and maintaining apps for our (IT) teammates out in the mill, and learning as much as I could about the software development process.",
-			"*This internship was my first and I learned a lot about working in a professional programming environment. Our team developed individual apps that would mainly retrieve data from a database and then display the data for the customer [teammates on the mill]. I got to work and finish multiple projects but the one I’m most proud of is rewriting the internal employee landing page. While it was a team effort, most of the coding itself was done by my fellow intern and I. I learned a lot about setting up a large project that would need to be maintained long term by lots of different people. I am very proud of what I accomplished, I was even able to impress the mill’s managers (if you know steel mill managers, that is not an easy feat)!"
-		});
-	}
-}

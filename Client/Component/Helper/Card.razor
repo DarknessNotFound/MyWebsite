@@ -14,14 +14,14 @@
         </div>
     }
 
-        @if(Body is not null)
+    @if(Body is not null)
     {
         <div class="card-body @BodyClass" style="background-color: #D4CDF4;">
             @Body
         </div>
     }
 
-        @if(Footer is not null)
+    @if(Footer is not null)
     {
         <div class="card-footer @FooterClass">
             @Footer
@@ -32,8 +32,8 @@
 <style>
     .CardCustomStyle {
         border-color: black;
-        width: 100%;
     }
+
     @@media(max-width: 991.98px)
     {
         .CardCustomStyle {
