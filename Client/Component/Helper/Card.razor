@@ -1,13 +1,13 @@
 <div class="card shadow CardCustomStyle @CardClass">
     @if(Header is not null)
     {
-        <div class="card-header @HeaderClass" style="background-color: #8B85C1">
+        <div class="card-header @HeaderClass" style="background-color: #acc1d0">
             @Header
         </div>
     }
     else if (!string.IsNullOrEmpty(Title))
     {
-        <div class="card-header" style="background-color: #8B85C1">
+        <div class="card-header" style="background-color: #acc1d0">
             <div class="h2">
                 @Title
             </div>
@@ -16,7 +16,7 @@
 
     @if(Body is not null)
     {
-        <div class="card-body @BodyClass" style="background-color: #D4CDF4;">
+        <div class="card-body @BodyClass" style="background-color: white;">
             @Body
         </div>
     }
